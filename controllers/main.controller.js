@@ -9,8 +9,8 @@ class MainCtrl {
 	}
 
 	getUsers(req, res) {
-		FirebaseService.getUsers().$loaded().then((snap) => {
-		    res.status(200).send(snap);
+		FirebaseService.getUsers().then((users) => {
+		    res.status(200).send(users);
 		},(err) => {
 		    res.status(400).send(err);
 		});
