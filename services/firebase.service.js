@@ -8,11 +8,17 @@ firebase.initializeApp({
 
 class FirebaseService {
 	constructor() {
-
+		this.usersRef = firebase.database().ref('users');
 	}
 
 	getUsers() {
-		return firebase.database().ref('users');
+		return new Promise((resolve, reject) => {
+			this.usersRef.once('value', (snapshot) => {
+				resolve(snapshot.val());
+			}, (err) => {
+				reject(err);
+			})
+		});
 	}
 
 }
