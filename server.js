@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var MainCtrl = require('./controllers/main.controller');
-//var config = require('./config');
+var config = require('./config');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -25,6 +25,11 @@ app.get('/help1', (req, res) => {
 	MainCtrl.help1(req, res);
 });
 
-app.listen(3001, () => {
-	console.log('App listening on port 3001');
+// Get users
+app.get('/users', (req, res) => {
+   MainCtrl.getUsers (req, res);
+});
+
+app.listen(4000, () => {
+	console.log('App listening on port 4000');
 });
