@@ -5,7 +5,6 @@ firebase.initializeApp({
 	serviceAccount: './firebaseCredentials.json',
 	databaseURL: config.databaseURL
 });
-var HelpersService = require('../services/helpers.service');
 
 class FirebaseService {
 	constructor() {
