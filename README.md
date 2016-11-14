@@ -1,5 +1,5 @@
-# Simple node.js-firebase microservice
-Quickly create a node.js microservice to make admin operations on a firebase database.
+# Simple Node.js-Firebase microservice
+Quickly create an Express.js microservice to make admin operations on a Firebase database.
 
 ## Install project dependencies
 `npm install`
