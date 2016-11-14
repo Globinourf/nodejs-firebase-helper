@@ -1,5 +1,5 @@
-# Simple node.js helper
-Mostly used to make one-time admin operations on a firebase database.
+# Simple node.js-firebase microservice
+Quickly create a node.js microservice to make admin operations on a firebase database.
 
 ## Install project dependencies
 `npm install`
